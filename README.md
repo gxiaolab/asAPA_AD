@@ -1,11 +1,11 @@
 # asAPA_AD
 Allele-specific alternative polyadenylation analysis on AD and control postmortem brains.
 
-This repository contains the primary analysis and figure-generation code associated with our study of **allele-specific alternative polyadenylation (asAPA) in the human brain and Alzheimer’s disease**.
+This repository contains the primary analysis and figure-generation code associated with our study of **Allele-specific alternative polyadenylation links noncoding genetic variation to Alzheimer's disease risk**.
 
-The study investigates genetic regulation of alternative polyadenylation across human brain regions, evaluates changes associated with Alzheimer’s disease pathology, and integrates asAPA events with functional genomic, RNA-binding protein (RBP), aQTL, and genetic association analyses.
+The study investigates genetic regulation of alternative polyadenylation across human brain regions and integrates asAPA events with functional analyses.
 
-The repository is organized around the major analyses presented in the manuscript. Because the complete analysis involved a large number of preprocessing, quality-control, and intermediate scripts, this repository focuses on the **core scripts required to reproduce the principal analyses and figures described in the study**.
+The repository is organized around the major analyses presented in the manuscript. Because the complete analysis involved a large number of preprocessing, quality-control, and intermediate scripts, this repository focuses on the **core scripts required to reproduce the principal analyses described in the study**.
 
 ## Repository structure
 
@@ -34,9 +34,9 @@ This directory contains code related to:
 
 ### `GO/`
 
-Gene Ontology enrichment analyses used to characterize biological processes and cellular functions associated with genes containing asAPA events.
+Gene Ontology enrichment analyses used to characterize biological processes and cellular functions associated with genes of interest.
 
-This directory includes code for enrichment analyses performed on the principal asAPA gene sets and prioritized functional subsets reported in the manuscript.
+This directory includes code for enrichment analyses performed on the principal asAPA gene set, prioritized functional subset, and FXS-shortened subset reported in the manuscript.
 
 ### `Concordance/`
 
@@ -50,15 +50,13 @@ Analyses evaluating potential RNA-binding protein mechanisms underlying asAPA re
 
 This directory contains code related to:
 
-* overlap of asAPA variants with RBP binding sites
 * eCLIP enrichment analyses
 * sequence motif enrichment
 * allele-specific RBP binding predictions
-* analyses of FMR1/FMRP-associated regulatory effects
 
 ### `FXS/`
 
-Scripts used to investigate alternative polyadenylation patterns in fragile X syndrome (FXS) and related FMR1-associated datasets.
+Scripts used to investigate alternative polyadenylation patterns in fragile X syndrome (FXS) datasets.
 
 These analyses were used to provide additional evidence for a potential relationship between FMRP activity and transcript 3′-end regulation.
 
@@ -72,7 +70,6 @@ Analyses include:
 * comparison of asAPA variants with aQTL signals
 * integration with external aQTL resources
 * overlap with genome-wide association study (GWAS) loci
-* downstream visualization of genetic associations
 
 ### `REDIT/`
 
@@ -93,7 +90,7 @@ Identification of asAPA events
     │
     ├──► Gene Ontology enrichment
     │
-    ├──► Cross-region concordance
+    ├──► Concordance
     │        │
     │        └──► RBP / motif analyses
     │
@@ -110,7 +107,7 @@ Additional FXS/FMR1 analyses
 
 ## Data
 
-The analyses in this repository use human brain RNA-seq, genotype, phenotype, and functional genomic datasets described in the manuscript.
+The analyses in this repository use human brain RNA-seq and genotype datasets described in the manuscript.
 
 Due to data-use restrictions and the size of the underlying sequencing datasets, primary sequencing and genotype data are **not distributed directly through this repository**. Accession numbers and instructions for accessing the relevant public or controlled-access datasets are provided in the manuscript's **Data Availability** section.
 
@@ -120,8 +117,8 @@ Intermediate files required by individual scripts are described within the corre
 
 The analyses were performed primarily using:
 
-* R
 * Python
+* R
 * Bash
 * ASARP
 * REDIT Regression
