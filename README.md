@@ -1,5 +1,5 @@
 # asAPA_AD
-Allele-specific alternative polyadenylation analysis on AD and control postmortem brains
+Allele-specific alternative polyadenylation analysis on AD and control postmortem brains.
 
 This repository contains the primary analysis and figure-generation code associated with our study of **allele-specific alternative polyadenylation (asAPA) in the human brain and Alzheimer’s disease**.
 
