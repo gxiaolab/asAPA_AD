@@ -153,17 +153,4 @@ rm ${DIR_STEP5}/IFG_tmp.txt
 rm ${DIR_STEP5}/PG_tmp.txt
 rm ${DIR_STEP5}/STG_tmp.txt
 
-echo "--- $(date) --- Step 6: Pvalue Correction ---"
-
-## change task to 1-1
-
-module load python
-names=${DIR_STEP5}/names.txt
-
-while read nm
-do
-        out=${DIR_STEP5}/${nm}_corrected.txt
-        python3 ${fdr_correction} ${DIR_STEP5}/${nm}.txt ${out}
-done < ${names}
-
 echo "--- $(date) --- Done ---"
